@@ -21,14 +21,18 @@
   "homepage": "https://github.com/ToolTra/paginated-posts-rest-api-node.ts#readme",
   "dependencies": {
     "express": "^4.17.2",
+    "mysql2": "^2.3.3",
     "sequelize": "^6.13.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.10",
     "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.5"
   },
-  "engines": { "node": "14.x" }
+  "engines": {
+    "node": "14.x"
+  }
 }
