@@ -1,0 +1,7 @@
+const path = require('path');
+
+module.exports = {
+    'config': "./dbConfi.js",
+    'seeders-path': path.join(__dirname, "seeders"),
+    'migrations-path': path.join(__dirname, "migrations"),
+};
