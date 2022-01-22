@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize";
+import { Sequelize, Dialect } from "sequelize";
 
 // Database configs
 import dbConfig from "./dbConfig";
