@@ -6,13 +6,13 @@ export default {
       'Post',
       {
         postId: {
-          type: DataTypes.UUID,
-          defaultValue: DataTypes.UUIDV4,
+          type: DataTypes.INTEGER,
+          autoIncrement: true,
           primaryKey: true,
         },
         title: DataTypes.STRING(100),
         content: DataTypes.TEXT,
-        photoURL: DataTypes.STRING(100)
+        photoURL: DataTypes.STRING(250)
       }
     );
   },
