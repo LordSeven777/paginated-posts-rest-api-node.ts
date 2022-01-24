@@ -1,7 +1,7 @@
 import { Sequelize, QueryInterface, DataTypes } from "sequelize";
 
 export default {
-  up: async (queryInterface: QueryInterface, Sequelize: Sequelize) => {
+  up: async (queryInterface: QueryInterface) => {
     return queryInterface.createTable(
       'Post',
       {
@@ -12,12 +12,22 @@ export default {
         },
         title: DataTypes.STRING(100),
         content: DataTypes.TEXT,
-        photoURL: DataTypes.STRING(250)
+        photoURL: DataTypes.STRING(250),
+        createdAt: {
+          type: DataTypes.DATE,
+          defaultValue: Sequelize.fn('now'),
+          allowNull: false
+        },
+        updatedAt: {
+          type: DataTypes.DATE,
+          defaultValue: Sequelize.fn('now'),
+          allowNull: false
+        }
       }
     );
   },
 
-  down: async (queryInterface: QueryInterface, Sequelize: Sequelize) => {
+  down: async (queryInterface: QueryInterface) => {
     return queryInterface.dropTable('Post');
   }
 };
