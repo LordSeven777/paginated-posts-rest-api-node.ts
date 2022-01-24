@@ -1,1 +1,14 @@
 GET http://localhost:5000
+
+###
+
+POST http://localhost:5000
+Content-Type: application/json
+
+{
+    "title": "Working from home in 2022",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste odit nobis commodi quas. Aliquid nulla repudiandae quis deserunt officiis, harum ipsam incidunt magnam tempora minima blanditiis natus alias ea assumenda debitis saepe eius, odit quia quam similique vitae repellendus tenetur cumque. Nesciunt reiciendis a qui voluptate facere vero, quod porro.",
+    "photoURL": "https://images.unsplash.com/photo-1553272725-086100aecf5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1530&q=80"
+}
+
+###
