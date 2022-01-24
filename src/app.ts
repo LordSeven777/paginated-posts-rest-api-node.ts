@@ -1,4 +1,4 @@
-import express from "express";
+import express, { ErrorRequestHandler } from "express";
 import { Op } from "sequelize";
 
 // Post model
@@ -40,5 +40,14 @@ app.post('/', async (req, res) => {
     const addedPost = await PostModel.create({ title, content, photoURL });
     res.json(addedPost);
 });
+
+// Error handler
+const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
+    if (err) {
+        console.log(err.message);
+        res.status(500).send('Something went bad on the server');
+    }
+}
+app.use(errorHandler);
 
 export default app;
